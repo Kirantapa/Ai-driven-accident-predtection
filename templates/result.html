@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Accident Severity Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+</head>
+
+
+<body>
+
+
+ <div class="navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Accident Severity Prediction</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/Map">Maps</a></li>
+          <li><a href="/Graphs">Graphs</a></li>
+          <li><a href="/Pie">Pie Charts</a></li>
+		  <li><a href="/wf">Weather Forecast</a></li>
+		  <li><a href="/result">Weather Report</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="services-bar">
+            <center><h1 class="my-4">Weather Report </h1></center>
+            <!-- Services Section -->
+            <div class="row">
+                
+				
+ <div class="col-md-5 col-sm-5 col-xs-5" style="margin-left:400px;">
+<section class="result">
+    <h2><small class="text-muted">Forecast for</small> {{data[0]}}</h2>
+    <div class="container-fluid">
+        <div class="card border-secondary mb-3" style="max-width: 20rem;">
+            <div class="card-header"><strong>Today</strong></div>
+            <div class="card-body">
+                <article>
+                    <p>{{data[1][0]}}</p>
+                    <em>temperature:  {{data[1][1]}}°C</em>
+                </article>
+            </div>
+        </div>
+        <div class="card border-secondary mb-3" style="max-width: 20rem;">
+            <div class="card-header"><strong>Tomorrow</strong></div>
+            <div class="card-body">
+                <article>
+                    <p>{{data[2][0]}}</p>
+                    <em>temperature:  {{data[2][1]}}°C</em>
+                </article>
+            </div>
+        </div>
+        <div class="card border-secondary mb-3" style="max-width: 20rem;">
+            <div class="card-header"><strong>Day after tomorrow</strong></div>
+            <div class="card-body">
+                <article>
+                    <p>{{data[3][0]}}</p>
+                    <em>temperature:  {{data[3][1]}}°C</em>
+                </article>
+            </div>
+        </div>
+		 <div class="card border-secondary mb-3" style="max-width: 20rem;">
+            <div class="card-header"><strong>Next Day</strong></div>
+            <div class="card-body">
+                <article>
+                    <p>{{data[4][0]}}</p>
+                    <em>temperature:  {{data[4][1]}}°C</em>
+                </article>
+            </div>
+        </div>
+    </div>
+	 
+	
+	
+    
+</section>
+ </div>
+		<h1>If no heavy rains predicted in the upcoming days, Accident will be less</h1>
+		</br>
+        <h1>If heavy rains predicted in the upcoming days, Accident will be more</h1>		
+				   
+		</br>
+</br>
+</br>		
+				
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- Portfolio Section -->
+ 
+        <hr>
+        <!-- Get In Touch Now Section -->
+        
+    </div>
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About</h5>
+          
+
+
+        </div>
+   
+  </footer> 
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <script>
+    $(document).ready(function(){
+$('select').not('.disabled').formSelect();
+});
+
+</script>
+	  
+<!-- Bootstrap core JavaScript -->
+
+</body>
+</html>

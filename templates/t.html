@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Accident Severity Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+</head>
+
+
+<body>
+
+
+ <div class="navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Accident Severity Prediction</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/Map">Maps</a></li>
+          <li><a href="/Graphs">Graphs</a></li>
+          <li><a href="/Pie">Pie Charts</a></li>
+		  <li><a href="/wf">Weather Forecast</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+ 
+ <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Accident Severity Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Enter your details to predict severity of your accident 
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4"><br>
+            <label for="first_name"><b>Sex Of the Driver</b></label>
+            <br>
+          <input placeholder="0 for Female and 1 for Male"  required="required" name="Temperature" id="first_name" type="number" class="validate" size="30">
+        </div><br>
+        <div class="input-field col s4">
+            
+          <label for="last_name"><b>Vehicle Type</b></label>
+            <br>
+          <input id="last_name" name="Oxygen" required="required" placeholder="n for n-seater vehicle"  type="number" class="validate" size="30">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b>Speed Limit</b></label>
+            <br>
+          <input id="_name" name="Humidity" required="required" placeholder="Speed limit on the road in kmph" type="number" class="validate" size="30">
+
+        </div><br>
+        <div class="input-field col s4">
+
+            <label for="first_name"><b>Road Type</b></label>
+            <br>
+          <input placeholder="On a scale from 0 to 10" name="Road" required="required" id="first_name" type="number" class="validate" size="30">
+        </div><br>
+        <div class="input-field col s4">
+            <label for="first_name"><b>Number of Pasengers</b></label>
+            <br>
+          <input placeholder="Number of Pasengers seated in car" required="required" name="Passengers" id="first_name" type="number" class="validate" size="30">
+        </div><br>
+
+        <div class="input-field col s4">
+            <label for="first_name"><b>Day</b></label>
+            <br>
+          <input placeholder="Day starting with 0 for Sunday" required="required" name="Day" id="first_name" type="number" class="validate" size="30">
+        </div><br>
+
+        <div class="input-field col s4">
+            <label for="first_name"><b>Light Conditions</b></label>
+            <br>
+          <input placeholder="Enter 0 for Daytime and 1 for Night" required="required" name="Light" id="first_name" type="number" class="materialize-textarea" size="30">
+        </div><br>
+
+
+      </div>
+
+        <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+
+        </div>
+    </form>
+      </div> 
+
+      <br>
+        {{pred}} <br>
+      
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About</h5>
+          
+
+
+        </div>
+   
+  </footer> 
+  
+  
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <script>
+    $(document).ready(function(){
+$('select').not('.disabled').formSelect();
+});
+
+</script>
+ 
+
+
+  </body>
+</html>
+
+
